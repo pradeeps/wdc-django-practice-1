@@ -19,16 +19,13 @@ from django_practice_1 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    ##################
-    # Your URLs here #
-    ##################
-
-    path('authors/', views.authors, name='authors'),
-    path('author/<str:authors_last_name>', views.author, name='author'),
     path('hello-world/', views.hello_world, name='hello_world'),
     path('date/', views.current_date, name='date'),
     path('my-age/<year>/<month>/<day>', views.my_age, name="my_age"),
     path('next-birthday/<birthday>', views.next_birthday, name="next_birthday"),
     path('profile/', views.profile, name="profile"),
+    path('authors/', views.authors, name='authors'),
+    path('author/<str:authors_last_name>', views.author, name='author'),
+ 
 ]
+
