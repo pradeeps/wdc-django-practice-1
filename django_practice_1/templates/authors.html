@@ -1,6 +1,7 @@
 <h1>Here's a list of authors:</h1>
 
 <ul>
-  <li><a href="/author/poe">Edgar Allan Poe</a></li>  <!-- Hardcoded URL -->
-  <li><a href="{% url 'author' authors_last_name='borges' %}">Jorge Luis Borges</a></li> <!-- Getting URL from url's name -->
+	{% for index, author in authors_info.items %}	
+  		<li><a href="{% url 'author' authors_last_name=index %}">{{ author.full_name }}</a></li> <!-- Getting URL from url's name -->
+  	{% endfor %}	
 </ul>
